@@ -1,0 +1,9 @@
+Starting program: /home/elie/Documents/Mesa_GL_ARB_gpu_shader_fp64/src/compiler/glsl_compiler --version 130 --dump-builder src/compiler/glsl/float64.glsl > ~/Downloads/test.h
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+ir_builder_print_visitor::print_without_declaration (
+    this=0x7fffffffe240, ir=0x55555591fe18)
+    at glsl/ir_builder_print_visitor.cpp:584
+584	         print_without_indent("r%04X", (unsigned)(uintptr_t) he->data);

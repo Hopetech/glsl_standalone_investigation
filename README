@@ -1,0 +1,17 @@
+This repository is used to share files in order to fix the Mesa GLSL standalone compiler.
+
+---
+Detection:
+---
+
+# ./glsl_compiler --version 130 --dump-builder float64.glsl > res_standalone.h
+# Segmentation fault
+
+---
+Files :
+---
+
+* float64.glsl : The glsl file containing all the fp64 functions to compile.
+* res_standalone.h : The output file produce by the standalone compiler. 
+* fp32-to-fp64-conversion.shader_test : The piglit test file
+* gdbLog : gdb output
