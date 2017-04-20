@@ -15,3 +15,11 @@ Files :
 * res_standalone.h : The output file produce by the standalone compiler. 
 * fp32-to-fp64-conversion.shader_test : The piglit test file
 * gdbLog : gdb output
+
+---
+Issue:
+---
+
+The standalone compiler don't have any support for dereferencing arrays in the
+ir_builder_print_visitor.cpp, and the float64 code uses arrays.  As soon as it
+hits the array dereference, bad things happen.
